@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人美容師専用 LINE集客・予約代行サービス</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#475569', // Slate 600 - 信頼感
+                        accent: '#14b8a6',  // Teal 500 - 清潔感・LINE想起
+                        bgsoft: '#f8fafc',  // Slate 50 - 優しい背景
+                    },
+                    fontFamily: {
+                        sans: ['"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', 'Meiryo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #0f766e, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        /* スムーズスクロール */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-slate-700 font-sans leading-relaxed tracking-wide">
+
+    <!-- ヘッダー -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center max-w-5xl">
+            <div class="text-sm md:text-base font-bold text-primary">
+                個人美容師専用 LINE集客・予約代行
+            </div>
+            <a href="#contact" class="bg-accent hover:bg-teal-600 text-white text-xs md:text-sm font-bold py-2 px-4 rounded-full transition duration-300 shadow-md">
+                無料相談はこちら
+            </a>
+        </div>
+    </header>
+
+    <!-- FV（ファーストビュー） -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 pb-12">
+        <div class="container mx-auto px-4 max-w-3xl text-center">
+            <p class="inline-block bg-white px-4 py-1 rounded-full text-accent font-bold text-sm md:text-base mb-6 shadow-sm border border-accent/20">
+                シェアサロン・業務委託美容師のための「LINE自動集客」
+            </p>
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8 text-slate-800">
+                インスタは頑張っている。<br class="hidden md:block">
+                でも、新規予約は増えない。<br><br>
+                <span class="text-xl md:text-2xl font-normal block mt-4">
+                    その原因は、LINEが<br class="md:hidden">
+                    「ただの連絡ツール」で<br class="md:hidden">
+                    止まっているからです。
+                </span>
+            </h1>
+            
+            <div class="mt-10">
+                <a href="#contact" class="inline-block bg-accent hover:bg-teal-600 text-white font-bold py-4 px-8 rounded-lg shadow-lg transform transition hover:-translate-y-1 text-lg w-full md:w-auto">
+                    LINE集客の無料相談をする
+                    <i class="fas fa-chevron-right ml-2"></i>
+                </a>
+                <p class="text-xs text-slate-500 mt-3">※無理な勧誘は一切ございません</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共感：悩みのチェックリスト -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-center text-xl md:text-2xl font-bold mb-10">
+                <span class="border-b-4 border-accent/30 pb-1">こんなお悩み、抱えていませんか？</span>
+            </h2>
+            <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        <span class="text-lg">SNSを毎日更新するのが正直しんどい</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        <span class="text-lg">フォロワーはいるのに、なぜか予約が増えない</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        <span class="text-lg">DMでの予約対応や問い合わせが地味にストレス</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-accent mt-1 mr-3 text-xl"></i>
+                        <span class="text-lg">LINE公式アカウントは作ったけど、結局使っていない</span>
+                    </li>
+                </ul>
+                <div class="mt-8 text-center font-bold text-primary">
+                    もし3つ以上当てはまるなら、<br>
+                    あなたは「損」をしている可能性があります。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問題提起：なぜ頑張っても予約が増えないのか？ -->
+    <section class="py-20 bg-bgsoft">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6 text-slate-800">
+                なぜ、これだけ努力しても<br class="md:hidden">予約が増えないのか？
+            </h2>
+            <p class="text-center mb-12 text-lg">
+                あなたの技術不足でも、インスタの投稿内容が悪いわけでもありません。<br>
+                単に、<strong>「予約につなげる仕組み（刈り取り）」</strong>が抜けているだけなのです。
+            </p>
+
+            <!-- 図解イメージ -->
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+                <!-- Instagram -->
+                <div class="flex-1 bg-white p-6 rounded-xl shadow-sm border-t-4 border-pink-500 relative">
+                    <div class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 md:hidden">
+                        <i class="fas fa-arrow-down text-3xl text-slate-300"></i>
+                    </div>
+                    <div class="absolute -right-3 top-1/2 transform -translate-y-1/2 hidden md:block z-10">
+                        <i class="fas fa-arrow-right text-3xl text-slate-300 bg-white rounded-full"></i>
+                    </div>
+                    
+                    <div class="text-center">
+                        <i class="fab fa-instagram text-5xl text-pink-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Instagram</h3>
+                        <p class="font-bold text-sm bg-pink-100 text-pink-700 inline-block px-3 py-1 rounded-full mb-4">認知・世界観</p>
+                        <p class="text-sm text-slate-600">
+                            「見つけてもらう場所」<br>
+                            しかし、流れが速く<br>投稿はすぐに埋もれてしまいます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LINE -->
+                <div class="flex-1 bg-white p-6 rounded-xl shadow-lg transform scale-105 border-t-4 border-green-500 z-0">
+                    <div class="text-center">
+                        <i class="fab fa-line text-5xl text-green-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">LINE公式</h3>
+                        <p class="font-bold text-sm bg-green-100 text-green-700 inline-block px-3 py-1 rounded-full mb-4">集客・予約・リピート</p>
+                        <p class="text-sm text-slate-600 font-bold">
+                            「忘れられず、来店させる場所」<br>
+                            お客様のポケットに入り込み、<br>直接アプローチできます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-10 font-bold text-lg">
+                この2つの「役割」を明確に分けることが、成功のカギです。
+            </p>
+        </div>
+    </section>
+
+    <!-- 解決策：LINEの本当の役割 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest uppercase text-sm">SOLUTION</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-2">
+                    LINEはチャットツールではなく<br>
+                    <span class="gradient-text">「自動で働く受付兼営業」</span>です
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Merit 1 -->
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">自動応答（ミニHP）</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            プロフィール、メニュー、料金、よくある質問をリッチメニューで自動表示。「いくらですか？」「場所は？」といった予約前の不安を自動で解消します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Merit 2 -->
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-bullhorn text-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">全体配信で空き枠を埋める</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            「明日急にキャンセルが出た」そんな時も、LINEなら一斉通知で「今すぐ行きたいお客様」を捕まえられます。ストーリーで待つより確実です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Merit 3 -->
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-comments text-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">DMの手間を激減</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            インスタのDMは埋もれがちですが、LINEなら必要な人だけ個別対応。予約のやり取りも自動化シナリオを組めば、施術に集中できます。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Merit 4 -->
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-ticket-alt text-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">リピートの仕組み化</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            紙のカードは忘れられますが、LINEショップカードならスマホの中に。来店翌日のサンキューメッセージも自動化し、再来率を高めます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心：LINE友だち追加広告 -->
+    <section class="py-20 bg-slate-800 text-white relative overflow-hidden">
+        <!-- Decorative bg -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6">
+                フォロワーではなく<br>
+                <span class="text-accent">「予約につながる連絡先」</span>を増やす
+            </h2>
+            <p class="text-center max-w-2xl mx-auto mb-12 text-slate-300">
+                本サービスの最大の強みは、ただ待つのではなく、<br class="hidden md:block">
+                LINE公式の仕組みを使って能動的に見込み客を集める点にあります。
+            </p>
+
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10">
+                <div class="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-accent mb-2">Target</div>
+                        <h4 class="font-bold mb-2">地域・年代を絞る</h4>
+                        <p class="text-sm text-slate-300">
+                            あなたのサロンに通える範囲の<br>20代〜40代女性だけに配信。<br>無駄打ちがありません。
+                        </p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-accent mb-2">Cost</div>
+                        <h4 class="font-bold mb-2">1人獲得 約200円</h4>
+                        <p class="text-sm text-slate-300">
+                            ホットペッパー等の媒体に比べ<br>圧倒的な低コスト。<br>月100人単位で見込み客が増加。
+                        </p>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-4xl font-bold text-accent mb-2">Quality</div>
+                        <h4 class="font-bold mb-2">質が高い</h4>
+                        <p class="text-sm text-slate-300">
+                            広告を見て「興味がある人」しか<br>登録しません。<br>ブロックされても質が上がります。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 比較：インスタ vs LINE -->
+    <section class="py-20 bg-bgsoft">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-center text-2xl font-bold mb-10">
+                「役割分担」でこれだけ変わります
+            </h2>
+            
+            <div class="overflow-hidden rounded-xl shadow-md bg-white">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider">
+                            <th class="p-4 border-b">比較項目</th>
+                            <th class="p-4 border-b font-medium text-slate-400">Instagramのみ</th>
+                            <th class="p-4 border-b font-bold text-accent bg-accent/5">LINE併用</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm md:text-base">
+                        <tr>
+                            <td class="p-4 border-b font-bold text-slate-700">見られる保証</td>
+                            <td class="p-4 border-b text-slate-500">アルゴリズム次第で埋もれる</td>
+                            <td class="p-4 border-b font-bold text-accent bg-accent/5">プッシュ通知で確実に届く</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b font-bold text-slate-700">予約導線</td>
+                            <td class="p-4 border-b text-slate-500">DMやリンクへの誘導が手間</td>
+                            <td class="p-4 border-b font-bold text-accent bg-accent/5">リッチメニューから自動誘導</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b font-bold text-slate-700">資産性</td>
+                            <td class="p-4 border-b text-slate-500">フォロワー（垢バンで消滅）</td>
+                            <td class="p-4 border-b font-bold text-accent bg-accent/5">顧客台帳（一生の資産）</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-xs text-slate-500 mt-4">
+                ※Instagramを否定するものではありません。Instagramは「認知」に最適化し、LINEに流すのが正解です。
+            </p>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section class="py-20 bg-white" id="plans">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-center text-3xl font-bold mb-4">Plans</h2>
+            <p class="text-center text-slate-500 mb-12">あなたの現状に合わせて選べる3つのプラン</p>
+
+            <div class="grid md:grid-cols-3 gap-6 items-end">
+                <!-- Plan 1 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-500">① 構築＆運用代行</h3>
+                    <p class="text-xs text-slate-400 mb-4 h-8">まずはLINEの土台を整え、<br>既存客を囲い込みたい方向け</p>
+                    <div class="text-3xl font-bold text-slate-700 mb-1">
+                        <span class="text-sm align-top font-normal">月額</span>10,000<span class="text-sm font-normal">円</span>
+                    </div>
+                    <ul class="text-sm text-slate-600 space-y-2 mt-6 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>アカウント構築</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>リッチメニュー制作</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>自動応答設定</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>月1回の配信代行</li>
+                    </ul>
+                </div>
+
+                <!-- Plan 3 (Recommended) - Needs to be in middle visually on desktop, but let's order logically. Actually middle is best for focus. -->
+                <div class="bg-white border-2 border-accent rounded-2xl p-6 shadow-xl relative transform md:-translate-y-4 z-10">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        Recommended
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-accent">③ フル運用プラン</h3>
+                    <p class="text-xs text-slate-500 mb-4 h-8">①と②をセットで。<br>全部任せて効率化したい方向け</p>
+                    <div class="text-4xl font-bold text-slate-800 mb-1">
+                        <span class="text-sm align-top font-normal">月額</span>18,000<span class="text-sm font-normal">円</span>
+                    </div>
+                    <p class="text-xs text-red-500 font-bold mb-4">＋広告費実費</p>
+                    
+                    <div class="bg-accent/10 rounded-lg p-3 mb-6 text-center text-sm font-bold text-accent">
+                        セットで10%OFF適用
+                    </div>
+
+                    <ul class="text-sm text-slate-700 space-y-3 mb-8">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><strong>プラン①の全内容</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i><strong>プラン②の全内容</strong></li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>優先チャットサポート</li>
+                    </ul>
+                    <a href="#contact" class="block w-full bg-accent hover:bg-teal-600 text-white text-center font-bold py-3 rounded-lg transition">
+                        まずは無料相談
+                    </a>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-500">② 友だち追加広告運用</h3>
+                    <p class="text-xs text-slate-400 mb-4 h-8">土台はあるので、<br>とにかく新規を増やしたい方向け</p>
+                    <div class="text-3xl font-bold text-slate-700 mb-1">
+                        <span class="text-sm align-top font-normal">月額</span>10,000<span class="text-sm font-normal">円</span>
+                    </div>
+                    <p class="text-xs text-red-500 font-bold mb-4">＋広告費実費</p>
+                    <ul class="text-sm text-slate-600 space-y-2 mt-6 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>広告クリエイティブ制作</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>ターゲティング設定</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i>運用・改善レポート</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 bg-slate-100 p-4 rounded-lg text-xs text-slate-500 leading-relaxed">
+                <p>※広告費（例：月20,000円〜）はLINE株式会社へ直接お支払いいただく実費です。当社が中抜きすることは一切ございませんのでご安心ください。<br>
+                ※最低契約期間は3ヶ月〜となります（効果測定のため）。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q&A -->
+    <section class="py-20 bg-bgsoft">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-center text-2xl font-bold mb-10">よくあるご質問</h2>
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800"><span class="text-accent mr-2">Q.</span>自分でもできますか？</h3>
+                    <p class="text-slate-600 text-sm">A. 可能ですが、「継続」と「成果」を出すのは別のスキルが必要です。プロに任せることで、あなたは本業の施術や技術向上に集中できます。</p>
+                </div>
+                <!-- Q2 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800"><span class="text-accent mr-2">Q.</span>売り込みっぽくなりませんか？</h3>
+                    <p class="text-slate-600 text-sm">A. むやみに配信するのではなく、お客様が必要な情報（空き状況など）だけを届けるため、むしろ「親切」な案内として喜ばれます。</p>
+                </div>
+                <!-- Q3 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800"><span class="text-accent mr-2">Q.</span>広告費は回収できますか？</h3>
+                    <p class="text-slate-600 text-sm">A. 美容師の単価であれば、獲得したお客様が1〜2人リピートすれば黒字化可能なケースがほとんどです。</p>
+                </div>
+                <!-- Q4 -->
+                <div class="bg-white rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg mb-2 text-slate-800"><span class="text-accent mr-2">Q.</span>シェアサロンや業務委託でも意味ありますか？</h3>
+                    <p class="text-slate-600 text-sm">A. 最適です。ホットペッパー等はサロンに紐づきますが、LINEは「あなた個人の顧客名簿」になります。将来独立する際や場所が変わっても、お客様を連れていける資産になります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- クロージング・CTA -->
+    <section id="contact" class="py-20 bg-white text-center">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                「全部自分でやる」から卒業し、<br>
+                賢く<span class="text-accent">「役割分担」</span>しましょう。
+            </h2>
+            <p class="text-slate-600 mb-10 leading-relaxed">
+                インスタはあなたの代わりに働いてくれませんが、<br>
+                LINEは一度仕組みを作れば、24時間あなたの代わりに働き続けます。<br><br>
+                まずはあなたの現状や悩みを、整理することから始めませんか？
+            </p>
+            
+            <button class="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-xl shadow-xl transform transition hover:-translate-y-1 text-xl flex items-center justify-center mx-auto">
+                <i class="fab fa-line text-3xl mr-3"></i>
+                <div>
+                    <span class="block text-xs font-normal opacity-90 mb-1">お気軽にご相談ください</span>
+                    まずは無料相談で話を聞いてみる
+                </div>
+            </button>
+            <p class="text-xs text-slate-400 mt-6">
+                ※無理な営業はいたしません。オンライン（Zoom）で30分程度お話を伺います。
+            </p>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-slate-50 py-8 border-t border-slate-200">
+        <div class="container mx-auto px-4 text-center text-xs text-slate-400">
+            <p>&copy; 2024 Personal Stylist Support. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
